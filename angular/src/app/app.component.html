@@ -1,0 +1,15 @@
+<main>
+  <nav class="side-bar">
+    <div class="logo">
+      <img [src]="getImage()" alt="">
+    </div>
+    <ul class="menu">
+      <li class="link2" routerLink="nasa" routerLinkActive="active-link" >Nasa</li>
+      <li class="link2" routerLink="simpsons" routerLinkActive="active-link">Simpons</li>
+      <li class="link2" routerLink="nosotros" routerLinkActive="active-link">Nosotros</li>
+    </ul>
+  </nav>
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
+</main>

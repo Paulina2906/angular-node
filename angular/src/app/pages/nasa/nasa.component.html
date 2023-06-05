@@ -1,0 +1,7 @@
+<mat-form-field [formGroup]="form">
+    <mat-label>Choose a date</mat-label>
+    <input  formControlName="date" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<button class="btn" mat-raised-button (click)="search()" color="primary">Obtener Imagen</button>
