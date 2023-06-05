@@ -2,7 +2,7 @@ const axios = require("axios").create({baseUrl: "http://apisimpsons.fly.dev"})
 
 const getPersonajes = (req, res, next) => {
     console.log('----------------')
-    axios.get('https://apisimpsons.fly.dev/api/personajes?limit=20')
+    axios.get('https://apisimpsons.fly.dev/api/personajes?limit=30')
     .then(function (response) {
         // manejar respuesta exitosa
         //console.log(response.data.docs)
@@ -17,12 +17,14 @@ const getPersonajes = (req, res, next) => {
 
 const getPersonaje = (req, res, next) => {
     const nombre = req.query.nombre
-    console.log(nombre)
-    axios.get(`https://apisimpsons.fly.dev/api/personajes/find/${nombre}`)
+    const n = nombre.split(' ')[0];
+    axios.get(`https://apisimpsons.fly.dev/api/personajes/find/${n}`)
     .then(function (response) {
         // manejar respuesta exitosa
         console.log(response.data)
-        res.send(response.data)
+        let personaje = response.data.result.find(o => o.Nombre === nombre);
+        console.log(response.data)
+        res.send(personaje)
     })
     .catch(function (error) {
         // manejar error

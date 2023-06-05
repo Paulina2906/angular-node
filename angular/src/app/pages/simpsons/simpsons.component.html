@@ -7,6 +7,30 @@
     </mat-select>
 </mat-form-field>
 
-<div *ngIf="personaje">
-    <img [src]="personaje[0].Imagen" alt="">
+<div *ngIf="personaje" class="card">
+    <div class="img-container">
+      <img [src]="personaje.Imagen" alt="">
+    </div>
+    <div class="detalles">
+      <div class="campo">
+        <label class="etiqueta">Nombre: </label>
+        <span class="desc">{{ personaje.Nombre }}</span>
+      </div>
+      <div class="campo">
+        <label class="etiqueta">Historia: </label>
+        <span class="desc">{{ personaje.Historia }}</span>
+      </div>
+      <div class="campo">
+        <label class="etiqueta">Genero: </label>
+        <span class="desc">{{ personaje.Genero }}</span>
+      </div>
+      <div class="campo">
+        <label class="etiqueta">Estado: </label>
+        <span class="desc">{{ personaje.Estado }}</span>
+      </div>
+      <div class="campo">
+        <label class="etiqueta">Ocupacion: </label>
+        <span class="desc">{{ personaje.Ocupacion }}</span>
+      </div>
+    </div>
 </div>

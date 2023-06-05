@@ -16,8 +16,7 @@ export class SimpsonsService {
   }
 
   getPersonaje(nombre: string) {
-    const n = nombre.split(' ')[0];
-    let params = new HttpParams().append('nombre', n);
+    let params = new HttpParams().append('nombre', nombre);
     return this.http.get(`${this.baseUrl}/personaje`, { params });
   }
 }

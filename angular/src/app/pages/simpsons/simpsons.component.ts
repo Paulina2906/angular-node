@@ -12,7 +12,7 @@ export class SimpsonsComponent {
 
   actualizar(ev: any) {
     this.simpsonsService.getPersonaje(ev.value).subscribe((res: any) => {
-      this.personaje = res.result;
+      this.personaje = res;
     })
   }
 }
