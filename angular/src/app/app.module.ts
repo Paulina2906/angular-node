@@ -16,13 +16,16 @@ import { SimpsonsComponent } from './pages/simpsons/simpsons.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { SimpsonsService } from './services/simpsons.service';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { StatusComponent } from './components/status/status.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NasaComponent,
     SimpsonsComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { MatSelectModule } from '@angular/material/select';
     HttpClientModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [NasaService, SimpsonsService],
   bootstrap: [AppComponent]

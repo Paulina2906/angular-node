@@ -1,0 +1,55 @@
+$blue-light:#1697F3;
+$gray-2: #c5c5c5;
+.p-24 {
+  padding: 24px;
+}
+.close {
+  display: flex;
+  justify-content: end;
+
+  &__button {
+    cursor: pointer;
+  }
+}
+
+.icon {
+  color: $blue-light;
+  font-size: 36px;
+}
+
+.status-icon {
+  font-size: 96px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48;
+
+  &--error {
+    color: #EE3D42;
+    margin-bottom: 18px;
+  }
+
+  &--success {
+    color: #c47a0b;
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.message {
+  padding-bottom: 32px;
+  font-size: 16px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.d-flex {
+  display: flex;
+}

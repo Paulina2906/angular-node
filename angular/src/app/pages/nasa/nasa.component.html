@@ -1,7 +1,27 @@
 <mat-form-field [formGroup]="form">
     <mat-label>Choose a date</mat-label>
-    <input  formControlName="date" matInput [matDatepicker]="picker">
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <input (dateChange)="search($event)" formControlName="date" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle  matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
-<button class="btn" mat-raised-button (click)="search()" color="primary">Obtener Imagen</button>
+<div class="container">
+    <div *ngFor="let i of data" class="card">
+        <div class="img-container">
+          <img [src]="getUrl(i.image)" alt="">
+        </div>
+        <div class="detalles">
+          <div class="campo">
+            <label class="etiqueta">ID: </label>
+            <span class="desc">{{ i.identifier }}</span>
+          </div>
+          <div class="campo">
+            <label class="etiqueta">Fecha: </label>
+            <span class="desc">{{ i.date }}</span>
+          </div>
+          <div class="campo">
+            <label class="etiqueta">Descripcion: </label>
+            <span class="desc">{{ i.caption }}</span>
+          </div>
+        </div>
+    </div>
+</div>

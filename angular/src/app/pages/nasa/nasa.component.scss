@@ -1,3 +1,47 @@
 .btn {
     margin-left: 12px;
 }
+
+.card {
+    height: 70%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border: 1px solid #e3e3e3;
+    max-width: 900px;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.detalles {
+    margin-left: 24px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.etiqueta {
+    font-size: 16px;
+    color: #0938b9;
+    font-weight: 600;
+}
+
+.desc {
+    font-size: 14px;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+.img-container {
+    display: flex;
+}
+
+.container {
+    height: calc(100% - 78px);
+    max-height: 100%;
+    overflow-y: auto;
+}
