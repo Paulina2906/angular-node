@@ -1,0 +1,49 @@
+.card {
+    height: 350px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border: 1px solid #e3e3e3;
+    max-width: 900px;
+    display: flex;
+    align-self: center;
+}
+.detalles {
+    margin-left: 24px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.etiqueta {
+    font-size: 20px;
+    color: #FFD90F;
+    font-weight: 600;
+    font-family: cursive;
+}
+img {
+    height: 100%;
+    width: auto;
+}
+
+.img-container {
+    width: 300px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.eti{
+    font-size: 25px;
+    color: #34495E ;
+    font-weight: 600;
+    font-family: cursive;
+    
+}
+.eti1{
+    font-size: 25px;
+    color: #34495E ;
+    font-weight: 600;
+    font-family: cursive;
+    text-align: center;
+}
