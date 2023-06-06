@@ -5,10 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NasaService {
-  baseUrl = '';
-  constructor(private http: HttpClient) { }
 
-  getImage(date: string) {
+  constructor(private http: HttpClient) { }//inyectamos la dependencia que nos permite hacer los request
+
+  getImage(date: string) {//esta llamada obtiene las fotos tomadas en la fecha seleccionada y se requiere mandar como parametro la fecha, ademas del API key
     return this.http.get(`https://api.nasa.gov/EPIC/api/natural/date/${date}?api_key=e5dgGUo055iohigAgms0SQ5elSluw3x7Lr4lwLPh`);
   }
 }
